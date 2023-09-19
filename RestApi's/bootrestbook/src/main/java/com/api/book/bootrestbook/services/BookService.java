@@ -74,4 +74,17 @@ public class BookService {
         list = list.stream().filter(book -> book.getBookId() !=id).
         collect(Collectors.toList());
     }
+
+
+    public void updateBook(Book book, int bookId) {
+
+       list = list.stream().map(b-> {
+        if (b.getBookId() == bookId) {
+            b.setAuthor(book.getAuthor());
+            b.setTitle(book.getTitle());        
+        }
+        return b;
+       
+    }).collect(Collectors.toList());
+    }
 }
