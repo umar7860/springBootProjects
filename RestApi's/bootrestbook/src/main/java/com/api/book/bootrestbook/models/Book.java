@@ -1,7 +1,19 @@
 package com.api.book.bootrestbook.models;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Books")
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int bookId;
+    // @Column(name = "Book_Author")
     private String title;
     private String author;
 
@@ -11,12 +23,8 @@ public class Book {
         this.author = author;
     }
 
-    
-
     public Book() {
     }
-
-
 
     public int getBookId() {
         return bookId;
@@ -42,12 +50,9 @@ public class Book {
         this.author = author;
     }
 
-
-
     @Override
     public String toString() {
         return "Book [bookId=" + bookId + ", title=" + title + ", author=" + author + "]";
     }
-    
-    
+
 }
