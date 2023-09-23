@@ -24,7 +24,7 @@ public class FileUploadController {
         System.out.println(file.getName());
         System.out.println(file.getContentType());
 
-        
+        //Adding our file
         try {
             if (file.isEmpty()) {
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Request must contains file");
