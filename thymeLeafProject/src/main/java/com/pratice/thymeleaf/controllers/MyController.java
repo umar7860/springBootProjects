@@ -1,9 +1,11 @@
 package com.pratice.thymeleaf.controllers;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,6 +23,18 @@ public class MyController {
 		
 		//return the name of html page
 		return "about";
+	}
+	
+	//this is for handling loops
+	@GetMapping("/example-loop")
+	public String iterateHandler(Model m) {
+		//Create a List,set collection... 
+		//Every object that extends from iterable class
+		
+		List<String> names = List.of("Umar","Ali","Momina","Faiz");
+		m.addAttribute("names",names);
+		
+		return "iterate";
 	}
 
 }
