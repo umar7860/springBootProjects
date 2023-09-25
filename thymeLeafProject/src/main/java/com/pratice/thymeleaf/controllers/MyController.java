@@ -36,5 +36,17 @@ public class MyController {
 		
 		return "iterate";
 	}
+	
+	//This is for conditional statements
+	@GetMapping("/condition")
+	public String conditionHandler(Model m) {
+		System.out.println("Conditional Handler Executed");
+		m.addAttribute("isActive",false);
+		m.addAttribute("gender",'M');
+		
+		List<Integer> list = List.of(12,34,55);
+		m.addAttribute("mylist",list);
+		return "condition";
+	}
 
 }
