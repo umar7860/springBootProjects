@@ -48,5 +48,12 @@ public class MyController {
 		m.addAttribute("mylist",list);
 		return "condition";
 	}
+	
+	//This is a handler for including thymeleaf fragment
+	
+	@GetMapping("/service")
+	public String servicesHandler(Model m) {
+		return "service";
+	}
 
 }
