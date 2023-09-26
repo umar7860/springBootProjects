@@ -5,10 +5,11 @@
 	<title>Footer Template</title>
 </head>
 <body>
-	<footer id="fragmentTag" th:fragment="footer1">
+	<footer id="fragmentTag" th:fragment="footer1(title,subTitle)">
 		
 		<div class="container">
-			
+			<h1>Title:<span th:Text="${title}"></span></h1>
+			<h1>SubTitle:<span th:Text="${subTitle}"></span></h1>
 			<h1>About Umar</h1>
 			<h1>Provided Good content about programming</h1>
 			<h1>Feel free to contact me</h1>

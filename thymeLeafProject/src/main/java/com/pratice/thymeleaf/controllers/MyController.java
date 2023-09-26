@@ -1,5 +1,6 @@
 package com.pratice.thymeleaf.controllers;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -53,6 +54,8 @@ public class MyController {
 	
 	@GetMapping("/service")
 	public String servicesHandler(Model m) {
+		m.addAttribute("title","My Title");
+		m.addAttribute("subTitle", String.valueOf(LocalDateTime.now()));
 		return "service";
 	}
 
