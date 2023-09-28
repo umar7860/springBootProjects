@@ -60,13 +60,13 @@ public class MyController {
 	}
 	
 	
-	//For newABout	
+	//For newABout page	
 	@GetMapping("/new-about")
 	public String newAbout() {
 		return "aboutNew"; 
 	}
 	
-	//For contactPage	
+	//For contactPage in Thymeleaf	
 		@GetMapping("/contact")
 		public String contact() {
 			return "contact"; 
