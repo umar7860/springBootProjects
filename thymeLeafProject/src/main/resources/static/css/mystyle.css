@@ -1,0 +1,13 @@
+body{
+	
+	background-color: aqua;
+	
+}
+.container{
+	background-color: aliceblue;
+	padding: 1%;
+}
+
+.profile{
+	border-radius: 50%;
+}
